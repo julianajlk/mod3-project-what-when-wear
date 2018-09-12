@@ -1,0 +1,223 @@
+/* TEXT */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,600');
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+
+/* NAV */
+.user-nav {
+  display: inline;
+  float: right;
+}
+
+.user-nav a:hover {
+ color: #ffffff;
+}
+
+.menu-links {
+ padding: 10px;
+ padding-left: 30px;
+ background: #ffbab1; /* salmon */
+ width: 100%;
+ display: block;
+ float: none;
+ z-index: 4;
+ position: fixed; /* Make it stick, even on scroll */
+ overflow: auto;
+}
+
+.menu-links h2 {
+  font-family: 'Playfair Display', serif;
+  display: inline;
+  padding-right: 30px;
+}
+
+.menu-links a {
+ text-align: center;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: #000;
+ padding-right: 30px;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.menu-links a:hover {
+ color: #ffffff;
+}
+
+/* BODY */
+
+#outfits-container {
+  padding-top: 150px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* BUTTONS  */
+.add_outfit_button button {
+  background-color: #ffece9;
+}
+
+button {
+  position: relative;
+  background-color: #ffbab1;
+  border: none;
+  /* border-radius: 5px; */
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: #ff7d74;
+}
+
+.edit-button {
+  background-color: #ffd5cf;
+}
+
+/* EDIT OUTFITS - FORM */
+.edit-outfit {
+  padding: 10rem 2rem 2rem;
+  width: stretch;
+  height: auto;
+  display: none;
+  background: #e1e2e7;
+  width: 100%;
+  float: none;
+  overflow: auto;
+}
+
+.edit-outfit-form {
+  width: 80%;
+}
+
+/* ADD OUTFITS - FORM */
+.add-outfit {
+  padding: 10rem 2rem 2rem;
+  width: stretch;
+  height: auto;
+  display: none;
+  background: #e1e2e7;
+  /* width: 100%; */
+  float: none;
+  z-index: 3;
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto;
+}
+
+.add-outfit-form {
+  width: 80%;
+}
+
+input[type='text'] {
+	background: #fff;
+  border: none;
+	/* border-bottom: solid 2px #474544;  */
+	margin: 0em 0 1em 0;
+  padding: 0 0.5em;
+	width: 100%;
+}
+
+.submit {
+  border: none;
+  position: relative;
+  background-color: #ffbab1;
+  height: 3rem;
+  width: max-content;
+  justify-self: center;
+  margin: 5px;
+}
+
+.submit:hover {
+  background-color: whitesmoke;
+  color: #ff7d74;
+}
+
+.input-text {
+  height: 2rem;
+  width: 70%;
+  margin: 5px;
+}
+
+.checkbox {
+  margin-left: 7px;
+  margin-bottom: 12px;
+}
+
+/* ADD OUTFITS - FORM RANGE  */
+.slide-container {
+    width: 100%;
+    padding-left: 6px;
+    margin-top: 3px;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #ffece9; /* slider color */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default ugly look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 15px;
+  background: #ffbab1;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 5px;
+  background: #ffbab1;
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+/* DISPLAY OUTFIT */
+.polaroid {
+  width: 400px;
+  background-color: #ffece9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.container-info {
+  text-align: center;
+  padding: 20px;
+
+}
+
+.outfit-img {
+  width: 400px;
+  height: auto;
+}

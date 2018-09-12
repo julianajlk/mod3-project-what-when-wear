@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>When What Wear</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- semantic UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="menu-links">
+        <h2>When What Wear</h2>
+        <a href="file:///Users/juliana/Development/bootcamp/projects/what_to_wear/clothes_frontend/index.html">Home</a>
+        <a href="http://localhost:3000/outfits/">Outfits</a>
+        <a href="http://localhost:3000/weathers/">Weather</a>
+        <a href="http://localhost:3000/date_periods/">Date</a>
+        <div class='add_outfit_button'><button id='new-outfit-btn'>Add New Outfit</button></p>
+        </div>
+
+        <div class="user-nav">
+          <a href="http://localhost:3000/users" id="user"></i></a>
+        </div>
+      </ul>
+    </nav>
+
+<!-- add form -->
+    <div class="add-outfit">
+      <form class="add-outift-form" style="">
+        <h4>ADD ITEMS TO YOUR CLOSET!</h4>
+
+        <input id="name-input" type="text" name="name" value="" placeholder="Enter an item's name..." class="input-text" required>
+        <br>
+        <input id="category-input" type="text" name="category" value="" placeholder="Enter  an item's category..." class="input-text" required>
+        <br>
+        <input id="description-input" type="text" name="description" value="" placeholder="Enter  an item's description..." class="input-text">
+        <br>
+        <input id="image-input" type="text" name="image" value="" placeholder="Enter  an item's image URL..." class="input-text" required>
+        <br>
+        <!-- dual range slider -->
+        <!-- <div class="ui segment">
+          <div id="double" class="ui double range"></div>
+            <p id="display-d"></p>
+          </div> -->
+
+        <!-- one range temperature slider -->
+        <div class="slide-container">
+          <p>This item is best for the below range in temperature:</p>
+          <input type="range" min="20" max="110" value="32" class="slider min-temp" id="tempRange">
+          <p>Min. Temperature: <span id="demo"></span></p>
+          <input type="range" min="20" max="110" value="70" class="slider max-temp" id="tempRangeMax">
+          <p>Max. Temperature: <span id="demoMax"></span></p>
+        </div><br>
+        <input id="rainy" class="checkbox" type="checkbox" name="check" value="true"> Can be worn when it's rainy<br>
+        <input id= "submit" type="submit" name="submit" value="Create New Outfit" class="submit">
+      </form>
+    </div>
+
+<!-- edit form -->
+    <div class="edit-outfit">
+      <form class="edit-outift-form" style="">
+        <h4>EDIT ITEMS TO YOUR CLOSET!</h4>
+
+        <input id="name-edit" type="text" name="name" value="" placeholder="Name" class="input-text" required>
+        <br>
+        <input id="category-edit" type="text" name="category" value="" placeholder="Category" class="input-text" required>
+        <br>
+        <input id="description-edit" type="text" name="description" value="" placeholder="Description" class="input-text">
+        <br>
+        <input id="image-edit" type="text" name="image" value="" placeholder="Image URL" class="input-text" required>
+        <br>
+        <div class="slide-container">
+          <p>This item is best for the below range in temperature:</p>
+          <input type="range" min="20" max="110" value="32" class="slider min-temp" id="tempRange">
+          <p>Min. Temperature: <span id="demo"></span></p>
+          <input type="range" min="20" max="110" value="70" class="slider max-temp" id="tempRangeMax">
+          <p>Max. Temperature: <span id="demoMax"></span></p>
+        </div><br>
+        <input id="rainy" class="checkbox" type="checkbox" name="check" value="true"> Can be worn when it's rainy<br>
+        <input id= "submit" type="submit" name="submit" value="Create New Outfit" class="submit">
+      </form>
+    </div>
+
+
+    <div id="outfits-container" class="container">
+
+    </div>
+
+  <!-- dual range temperature slider JS/JQuery -->
+  <!-- <script>
+  // Semantic UI Range
+  // $('#double').range({
+  //   min: 32,
+  //   max: 110,
+  //   start: 70,
+  //   step: 1,
+  //   verbose: true,
+  //   debug: true,
+  //   onChange: function(value) {
+  //     var
+  //       $self = $(this),
+  //       firstVal = $self.range('get thumb value'),
+  //       secVal = $self.range('get thumb value', 'second');
+  //     $('#display-d').html('Minimum Temperature:' + firstVal + " | Maximum Temperature: " + secVal);
+  //   }
+  // });
+
+  // $('#range-0').range({
+  //   min: 0,
+  //   max: 10,
+  //   start: 5,
+  //   labelType: 'letter'
+  // });
+  </script> -->
+
+  <!-- one range temperature slider JS-->
+  <script>
+    var slider = document.getElementById('tempRange');
+    var output = document.getElementById('demo');
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var sliderMax = document.getElementById('tempRangeMax');
+    var outputMax = document.getElementById('demoMax');
+    outputMax.innerHTML = sliderMax.value;
+
+    sliderMax.oninput = function() {
+      outputMax.innerHTML = this.value;
+    }
+  </script>
+
+  <script type="text/javascript" src="src_oojs/Outfit.js"></script>
+  <script type="text/javascript" src="src_oojs/Controller.js"></script>
+  <script type="text/javascript" src="src_oojs/index.js"></script>
+  <!-- <script type="text/javascript" src="src/index.js"></script> -->
+  </body>
+</html>
