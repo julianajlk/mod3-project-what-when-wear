@@ -4,7 +4,7 @@ class Controller {
   }
 
 
-  toggleForm() {
+  toggleAddForm() {
     this.addOutfit = !this.addOutfit
     let outfitForm = document.querySelector('.add-outfit')
     if (this.addOutfit) {
@@ -68,11 +68,11 @@ class Controller {
       outfitContainer.classList.add('polaroid')
       outfitContainer.id = `outfit-${outfit.id}`
       mainContainer.appendChild(outfitContainer)
-      
+
       outfitObj.renderOutfit(outfitContainer)
     })
       event.target.reset()
-      this.toggleForm()
+      this.toggleAddForm()
   }
 
 }
