@@ -50,10 +50,10 @@
         <!-- one range temperature slider -->
         <div class="slide-container">
           <p>This item is best for the below range in temperature:</p>
-          <input type="range" min="20" max="110" value="32" class="slider min-temp" id="tempRange">
-          <p>Min. Temperature: <span id="demo"></span></p>
-          <input type="range" min="20" max="110" value="70" class="slider max-temp" id="tempRangeMax">
-          <p>Max. Temperature: <span id="demoMax"></span></p>
+          <input type="range" min="20" max="110" value="32" class="slider min-temp" id="addTempRangeMin">
+          <p>Min. Temperature: <span id="addTempValueMin"></span></p>
+          <input type="range" min="20" max="110" value="70" class="slider max-temp" id="addTempRangeMax">
+          <p>Max. Temperature: <span id="addTempValueMax"></span></p>
         </div><br>
         <input id="rainy" class="checkbox" type="checkbox" name="check" value="true"> Can be worn when it's rainy<br>
         <input id= "submit" type="submit" name="submit" value="Create New Outfit" class="submit">
@@ -62,8 +62,8 @@
 
 <!-- edit form -->
     <div class="edit-outfit">
-      <form class="edit-outift-form" style="">
-        <h4>EDIT ITEMS TO YOUR CLOSET!</h4>
+      <form class="edit-outift-form">
+        <h4>EDIT THIS ITEM IN YOUR CLOSET!</h4>
 
         <input id="name-edit" type="text" name="name" value="" placeholder="Name" class="input-text" required>
         <br>
@@ -75,13 +75,13 @@
         <br>
         <div class="slide-container">
           <p>This item is best for the below range in temperature:</p>
-          <input type="range" min="20" max="110" value="32" class="slider min-temp" id="tempRange">
-          <p>Min. Temperature: <span id="demo"></span></p>
-          <input type="range" min="20" max="110" value="70" class="slider max-temp" id="tempRangeMax">
-          <p>Max. Temperature: <span id="demoMax"></span></p>
+          <input type="range" min="20" max="110" class="slider min-temp" id="editTempRangeMin">
+          <p>Min. Temperature: <span id="editTempValueMin"></span></p>
+          <input type="range" min="20" max="110" class="slider max-temp" id="editTempRangeMax">
+          <p>Max. Temperature: <span id="editTempValueMax"></span></p>
         </div><br>
-        <input id="rainy" class="checkbox" type="checkbox" name="check" value="true"> Can be worn when it's rainy<br>
-        <input id= "submit" type="submit" name="submit" value="Create New Outfit" class="submit">
+        <input id="rainy-edit" class="checkbox" type="checkbox" name="check" value="true"> Can be worn when it's rainy<br>
+        <input id= "submit-edit" type="submit" name="submit" value="Save This Item" class="submit">
       </form>
     </div>
 
@@ -117,22 +117,42 @@
   // });
   </script> -->
 
-  <!-- one range temperature slider JS-->
+  <!-- one range temperature slider JS - ADD -->
   <script>
-    var slider = document.getElementById('tempRange');
-    var output = document.getElementById('demo');
-    output.innerHTML = slider.value;
+    var addSliderMin = document.getElementById('addTempRangeMin');
+    var addOutputMin = document.getElementById('addTempValueMin');
+    addOutputMin.innerHTML = addSliderMin.value;
 
-    slider.oninput = function() {
-      output.innerHTML = this.value;
+    addSliderMin.oninput = function() {
+      addOutputMin.innerHTML = this.value;
     }
 
-    var sliderMax = document.getElementById('tempRangeMax');
-    var outputMax = document.getElementById('demoMax');
-    outputMax.innerHTML = sliderMax.value;
+    var addSliderMax = document.getElementById('addTempRangeMax');
+    var addOutputMax = document.getElementById('addTempValueMax');
+    addOutputMax.innerHTML = addSliderMax.value;
 
-    sliderMax.oninput = function() {
-      outputMax.innerHTML = this.value;
+    addSliderMax.oninput = function() {
+      addOutputMax.innerHTML = this.value;
+    }
+  </script>
+
+
+  <!-- one range temperature slider JS - EDIT -->
+  <script>
+    var editSliderMin = document.getElementById('editTempRangeMin');
+    var editOutputMin = document.getElementById('editTempValueMin');
+    editOutputMin.innerHTML = editSliderMin.value;
+
+    editSliderMin.oninput = function() {
+      editOutputMin.innerHTML = this.value;
+    }
+
+    var editSliderMax = document.getElementById('editTempRangeMax');
+    var editOutputMax = document.getElementById('editTempValueMax');
+    editOutputMax.innerHTML = editSliderMax.value;
+
+    editSliderMax.oninput = function() {
+      editOutputMax.innerHTML = this.value;
     }
   </script>
 

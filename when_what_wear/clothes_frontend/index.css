@@ -83,7 +83,7 @@ button {
 }
 
 button:hover {
-  background-color: whitesmoke;
+  background-color: #f4f4f4;
   color: #ff7d74;
 }
 
@@ -94,17 +94,11 @@ button:hover {
 /* EDIT OUTFITS - FORM */
 .edit-outfit {
   padding: 10rem 2rem 2rem;
-  width: stretch;
+  width: 400px;
   height: auto;
-  display: none;
-  background: #e1e2e7;
-  width: 100%;
+  background: #adbbff;
   float: none;
   overflow: auto;
-}
-
-.edit-outfit-form {
-  width: 80%;
 }
 
 /* ADD OUTFITS - FORM */
@@ -114,7 +108,6 @@ button:hover {
   height: auto;
   display: none;
   background: #e1e2e7;
-  /* width: 100%; */
   float: none;
   z-index: 3;
   position: fixed; /* Make it stick, even on scroll */
@@ -145,7 +138,7 @@ input[type='text'] {
 }
 
 .submit:hover {
-  background-color: whitesmoke;
+  background-color: #f4f4f4;
   color: #ff7d74;
 }
 

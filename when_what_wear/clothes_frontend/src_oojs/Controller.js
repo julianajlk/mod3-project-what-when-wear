@@ -9,11 +9,8 @@ class Controller {
     let outfitForm = document.querySelector('.add-outfit')
     if (this.addOutfit) {
       outfitForm.style.display = 'block'
-      document.querySelector('.add-outfit').addEventListener('submit', this.createPostFetch)
-      // document.querySelector('.add-outfit').addEventListener('submit', function(event) {
-      //   event.preventDefault()
-      //   this.handleCreate
-      // })
+      document.querySelector('.add-outfit').addEventListener('submit', this.createPostFetch.bind(this))
+
     } else {
       outfitForm.style.display = 'none'
     }
@@ -26,21 +23,24 @@ class Controller {
     .then(userData => {
       userData.outfits.forEach(outfit => {
         let outfitObj = new Outfit(outfit.id, outfit.name, outfit.description, outfit.category, outfit.image_url, outfit.min_temperature, outfit.max_temperature, outfit.is_rainy)
-        outfitObj.renderOutfit()
+
+        //what should not be updated in the outfits container when rendering edited info after patch
+        let mainContainer = document.querySelector('#outfits-container')
+        let outfitContainer = document.createElement('div')
+        outfitContainer.classList.add('polaroid')
+        outfitContainer.id = `outfit-${outfit.id}`
+        mainContainer.appendChild(outfitContainer)
+
+        //need to pass in outfitContainer as the argument in order for the function renderOutfit at Outfit to know what it is (since it will not be defined there)
+        outfitObj.renderOutfit(outfitContainer)
+
+      })
+      let user = document.querySelector('#user')
+      user.innerText = `User: ${userData.name}`
     })
-    let user = document.querySelector('#user')
-    user.innerText = `User: ${userData.name}`
-  })
   }
 
-  //this should be called every time a new outfit is created
-  // handleCreate() {
-  //   event.preventDefault()
-  //   console.log(this)
-  //   this.createPostFetch()
-  //   event.target.reset()
-  // }
-
+//creating the outfit for the first time, the outfit doesn't exist yet, so put in controller, not related to one specific outfit, related to the app as a whole
   createPostFetch() {
     event.preventDefault()
     let outfitName = document.getElementById('name-input').value
@@ -61,17 +61,18 @@ class Controller {
     })
     .then(response => response.json())
     .then(outfit => {
-      let outfitObj = new Outfit(outfit.id, outfit.name, outfit.description, outfit.category, outfit.image_url)
-      outfitObj.renderOutfit()
+      let outfitObj = new Outfit(outfit.id, outfit.name, outfit.description, outfit.category, outfit.image_url, outfit.min_temperature, outfit.max_temperature, outfit.is_rainy)
+
+      let mainContainer = document.querySelector('#outfits-container')
+      let outfitContainer = document.createElement('div')
+      outfitContainer.classList.add('polaroid')
+      outfitContainer.id = `outfit-${outfit.id}`
+      mainContainer.appendChild(outfitContainer)
+      
+      outfitObj.renderOutfit(outfitContainer)
     })
       event.target.reset()
-
-    //bug TO FIX!!! when added outfit, cannot click to add another one without page reload
-      event.target.style.display = 'none'
-
+      this.toggleForm()
   }
-
-
-
 
 }

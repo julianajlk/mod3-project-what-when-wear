@@ -1,7 +1,10 @@
 class OutfitsController < ApplicationController
-  #GET fetch all
   def index
     render json: Outfit.all
+  end
+
+  def show
+    render json: Outfit.find(params[:id])
   end
 
   def create
@@ -9,7 +12,8 @@ class OutfitsController < ApplicationController
   end
 
   def update
-    render json: Outfit.find_by(params[:id]).update(outfit_params)
+    Outfit.find(params[:id]).update(outfit_params)
+    render json: Outfit.find(params[:id]) 
   end
 
   def destroy

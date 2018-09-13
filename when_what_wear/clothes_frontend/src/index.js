@@ -75,7 +75,7 @@ function createPostFetch(){
   let outfitCategory = document.getElementById('category-input').value
   let outfitDescription = document.getElementById('description-input').value
   let outfitImage = document.getElementById('image-input').value
-  let outfitTemp = document.getElementById('tempRange').value
+  let outfitTemp = document.getElementById('addTempRange').value
   let outfitRainy = document.getElementById('rainy').checked
   let data = {name: outfitName, category: outfitCategory, description: outfitDescription, image_url: outfitImage, max_temperature: outfitTemp, "is_rainy": outfitRainy, user_id: 1}
   debugger
