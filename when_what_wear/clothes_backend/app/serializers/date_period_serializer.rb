@@ -1,3 +1,3 @@
 class DatePeriodSerializer < ActiveModel::Serializer
-  attributes :id, :date
+  attributes :id, :date, :weather_id
 end

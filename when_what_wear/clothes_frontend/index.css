@@ -8,18 +8,12 @@ h4 {
   letter-spacing: 0.1em;
 }
 
+body, html {
+  height: 40% !important;
+}
 
 /* NAV */
-.user-nav {
-  display: inline;
-  float: right;
-}
-
-.user-nav a:hover {
- color: #ffffff;
-}
-
-.menu-links {
+.nav-bar {
  padding: 10px;
  padding-left: 30px;
  background: #ffbab1; /* salmon */
@@ -29,16 +23,25 @@ h4 {
  z-index: 4;
  position: fixed; /* Make it stick, even on scroll */
  overflow: auto;
+ margin: 0;
 }
 
-.menu-links h2 {
+.nav-bar button {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-bar h2 {
   font-family: 'Playfair Display', serif;
-  display: inline;
+  display: inline-block;
   padding-right: 30px;
+  padding-bottom: 5px;
 }
 
-.menu-links a {
- text-align: center;
+.nav-bar a {
  letter-spacing: 0.2em;
  text-transform: uppercase;
  color: #000;
@@ -46,16 +49,11 @@ h4 {
  font-family: 'Montserrat', sans-serif;
 }
 
-.menu-links a:hover {
+.nav-bar a:hover {
  color: #ffffff;
 }
 
 /* BODY */
-
-#outfits-container {
-  padding-top: 150px;
-}
-
 .container {
   width: 100%;
   padding-right: 30px;
@@ -92,19 +90,35 @@ button:hover {
 }
 
 /* EDIT OUTFITS - FORM */
+.edit-container {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.edit-parent {
+  display:table-cell;
+  vertical-align:middle;
+}
+
 .edit-outfit {
-  padding: 10rem 2rem 2rem;
+  margin-top: 5.5rem;
+  padding: 2.5rem 2rem 2rem;
   width: 400px;
+  display: none;
   height: auto;
   background: #adbbff;
   float: none;
   overflow: auto;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 4;
 }
 
 /* ADD OUTFITS - FORM */
 .add-outfit {
   padding: 10rem 2rem 2rem;
-  width: stretch;
+  width: 400px;
   height: auto;
   display: none;
   background: #e1e2e7;
@@ -112,10 +126,6 @@ button:hover {
   z-index: 3;
   position: fixed; /* Make it stick, even on scroll */
   overflow: auto;
-}
-
-.add-outfit-form {
-  width: 80%;
 }
 
 input[type='text'] {
@@ -201,7 +211,8 @@ input[type='text'] {
   width: 400px;
   background-color: #ffece9;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+  margin: 25px;
+  float: left;
 }
 
 .container-info {

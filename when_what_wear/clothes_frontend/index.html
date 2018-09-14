@@ -13,16 +13,20 @@
 
   <body>
     <nav>
-      <ul class="menu-links">
+      <ul class="nav-bar">
         <h2>When What Wear</h2>
-        <a href="file:///Users/juliana/Development/bootcamp/projects/what_to_wear/clothes_frontend/index.html">Home</a>
-        <a href="http://localhost:3000/outfits/">Outfits</a>
-        <a href="http://localhost:3000/weathers/">Weather</a>
-        <a href="http://localhost:3000/date_periods/">Date</a>
         <div class='add-outfit-button'><button id='new-outfit-btn'>Add New Outfit</button></p>
         </div>
+        <!-- <div class='add-outfit-button'><button id='new-outfit-btn'>Select Date</button></p>
+        </div> -->
+        <select>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
 
-        <div class="user-nav">
+        <div>
           <a href="http://localhost:3000/users" id="user"></i></a>
         </div>
       </ul>
@@ -41,11 +45,6 @@
         <br>
         <input id="image-input" type="text" name="image" value="" placeholder="Enter  an item's image URL..." class="input-text" required>
         <br>
-        <!-- dual range slider -->
-        <!-- <div class="ui segment">
-          <div id="double" class="ui double range"></div>
-            <p id="display-d"></p>
-          </div> -->
 
         <!-- one range temperature slider -->
         <div class="slide-container">
@@ -61,8 +60,10 @@
     </div>
 
 <!-- edit form -->
+<div class="edit-container">
+  <div class="edit-parent">
     <div class="edit-outfit">
-      <form class="edit-outift-form">
+      <form class="edit-outfit-form">
         <h4>EDIT THIS ITEM IN YOUR CLOSET!</h4>
 
         <input id="name-edit" type="text" name="name" value="" placeholder="Name" class="input-text" required>
@@ -84,38 +85,12 @@
         <input id= "submit-edit" type="submit" name="submit" value="Save This Item" class="submit">
       </form>
     </div>
-
+  </div>
+</div>
 
     <div id="outfits-container" class="container">
 
     </div>
-
-  <!-- dual range temperature slider JS/JQuery -->
-  <!-- <script>
-  // Semantic UI Range
-  // $('#double').range({
-  //   min: 32,
-  //   max: 110,
-  //   start: 70,
-  //   step: 1,
-  //   verbose: true,
-  //   debug: true,
-  //   onChange: function(value) {
-  //     var
-  //       $self = $(this),
-  //       firstVal = $self.range('get thumb value'),
-  //       secVal = $self.range('get thumb value', 'second');
-  //     $('#display-d').html('Minimum Temperature:' + firstVal + " | Maximum Temperature: " + secVal);
-  //   }
-  // });
-
-  // $('#range-0').range({
-  //   min: 0,
-  //   max: 10,
-  //   start: 5,
-  //   labelType: 'letter'
-  // });
-  </script> -->
 
   <!-- one range temperature slider JS - ADD -->
   <script>

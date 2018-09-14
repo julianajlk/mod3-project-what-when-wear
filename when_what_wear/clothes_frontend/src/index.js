@@ -78,7 +78,6 @@ function createPostFetch(){
   let outfitTemp = document.getElementById('addTempRange').value
   let outfitRainy = document.getElementById('rainy').checked
   let data = {name: outfitName, category: outfitCategory, description: outfitDescription, image_url: outfitImage, max_temperature: outfitTemp, "is_rainy": outfitRainy, user_id: 1}
-  debugger
   fetch(`http://localhost:3000/outfits`, {
     method: 'POST',
     body: JSON.stringify(data),
@@ -89,7 +88,6 @@ function createPostFetch(){
   })
   .then(response => response.json())
   .then(outfit => {
-    debugger
     renderOutfit(outfit)
   })
 }
