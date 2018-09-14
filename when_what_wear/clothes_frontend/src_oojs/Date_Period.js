@@ -6,6 +6,13 @@ class DatePeriod {
   }
 
   fetchDates() {
-    
+    fetch(`http://localhost:3000/date_periods`)
+    .then(response => response.json())
+    .then(dateData => {
+      addDatesToDropwdown(dateData)})
+    }
   }
-}
+
+  addDatesToDropwdown() {
+
+  }

@@ -33,9 +33,9 @@ Weather.create(temperature_avg: 45, precipitation: 65)
 Weather.create(temperature_avg: 32, precipitation: 0)
 
 DatePeriod.create(date: "09/10/2018", weather_id: 1)
-DatePeriod.create(date: "11/25/2018", weather_id: 2)
-DatePeriod.create(date: "12/30/2018", weather_id: 3)
-DatePeriod.create(date: "02/15/2019", weather_id: 4)
-DatePeriod.create(date: "04/28/2019", weather_id: 5)
+DatePeriod.create(date: "11/04/2018", weather_id: 2)
+DatePeriod.create(date: "12/02/2018", weather_id: 3)
+DatePeriod.create(date: "02/11/2019", weather_id: 4)
+DatePeriod.create(date: "04/10/2019", weather_id: 5)
 
 puts "seeded"
