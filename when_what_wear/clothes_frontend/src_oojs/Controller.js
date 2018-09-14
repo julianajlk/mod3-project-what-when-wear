@@ -68,8 +68,9 @@ class Controller {
         outfitObj.renderOutfit(outfitContainer)
 
       })
-      let user = document.querySelector('#user')
-      user.innerText = `User: ${userData.name}`
+      //show user in navbar
+      // let user = document.querySelector('#user')
+      // user.innerText = `User: ${userData.name}`
     })
   }
 
