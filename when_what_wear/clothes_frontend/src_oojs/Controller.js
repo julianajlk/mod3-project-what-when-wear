@@ -139,4 +139,18 @@ class Controller {
     event.preventDefault()
   }
 
+
+  //DATES
+  fetchDates() {
+    fetch(`http://localhost:3000/date_periods`)
+    .then(response => response.json())
+    .then(dateData => {
+      dateData.forEach(date => {
+        let dateObj = new DatePeriod(date.id, date.date, date.weather_id)
+        dateObj.renderDatesToDropwdown(date)
+      })
+    })
+  }
+
+
 }

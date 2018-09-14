@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(name: "Nancy", city: "DC", email: "nancy@email.com")
 
-Outfit.create(name: "White Jeans", description: "White J.Brand Skinny Jeans", category: "Bottoms", image_url: "https://i.s-madewell.com/is/image/madewell/H5893_WT8315_ld?$MW_480x610$", min_temperature: 40, max_temperature: 95, is_rainy: false, user_id: 1)
+Outfit.create(name: "White Jeans", description: "White Skinny Jeans", category: "Bottoms", image_url: "https://i.s-madewell.com/is/image/madewell/H5893_WT8315_ld?$MW_480x610$", min_temperature: 40, max_temperature: 95, is_rainy: false, user_id: 1)
 
 Outfit.create(name: "Denim Shorts", description: "Denim Cut Off Shorts", category: "Bottoms", image_url: "https://i.s-madewell.com/is/image/madewell/J0526_DM2177_ld?$MW_1007x1280$", min_temperature: 75, max_temperature: 110, is_rainy: false, user_id: 1)
 

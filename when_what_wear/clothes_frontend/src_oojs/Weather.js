@@ -4,3 +4,4 @@ class Weather {
     this.temperature_avg = temperature_avg
     this.precipitation = precipitation
   }
+}

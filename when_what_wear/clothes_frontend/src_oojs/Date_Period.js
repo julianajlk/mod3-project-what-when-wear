@@ -5,14 +5,11 @@ class DatePeriod {
     this.weather_id = weather_id
   }
 
-  fetchDates() {
-    fetch(`http://localhost:3000/date_periods`)
-    .then(response => response.json())
-    .then(dateData => {
-      addDatesToDropwdown(dateData)})
-    }
+  renderDatesToDropwdown(date) {
+    let dateDropdown = document.querySelector('.date-options')
+    let option = document.createElement('option')
+    option.id = `option-${date.id}`
+    option.innerText = `${date.date}`
+    dateDropdown.appendChild(option)
   }
-
-  addDatesToDropwdown() {
-
-  }
+}
