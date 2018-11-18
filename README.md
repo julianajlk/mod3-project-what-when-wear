@@ -4,7 +4,7 @@
 
 ##### Flatiron School Software Engineering Immersive - Module 3 Project
 
-![Demo](https://github.com/julianajlk/mod3-project-what-when-wear/tree/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_demo.gif)
+![Demo](https://github.com/julianajlk/mod3-project-what-when-wear/blob/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_demo.gif)
 
 See the video demo <a href="https://vimeo.com/297788002
 ">here</a>
@@ -20,9 +20,9 @@ BACKEND
 
 - Ruby on Rails
 
-![alt text](https://github.com/julianajlk/mod3-project-what-when-wear/tree/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_1.png "WhenWhatWear Features")
+![alt text](https://github.com/julianajlk/mod3-project-what-when-wear/blob/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_1.png "WhenWhatWear Features")
 
-![alt text](https://github.com/julianajlk/mod3-project-what-when-wear/tree/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_2.png "WhenWhatWear Features 2")
+![alt text](https://github.com/julianajlk/mod3-project-what-when-wear/blob/master/when_what_wear/clothes_frontend/src/images/WhenWhatWear_2.png "WhenWhatWear Features 2")
 
 ### Features:
 
