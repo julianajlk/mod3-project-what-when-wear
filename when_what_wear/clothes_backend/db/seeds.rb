@@ -15,11 +15,11 @@ Outfit.create(name: "Chambray BD", description: "Chambray Button Down", category
 
 Outfit.create(name: "Striped Tee", description: "Striped Ciao Tee", category: "Tops", image_url: "https://i.s-madewell.com/is/image/madewell/J9107_KA4036_ld?$MW_320x407$", min_temperature: 65, max_temperature: 110, is_rainy: true, user_id: 1)
 
-Outfit.create(name: "Parka", description: "Green Parka with Hood", category: "Outerwear", image_url: "https://i.s-madewell.com/is/image/madewell/K1400_EG9870_ld?$MW_320x407$", min_temperature: 32, max_temperature: 55, is_rainy: true, user_id: 1)
+Outfit.create(name: "Parka", description: "Green Parka", category: "Outerwear", image_url: "https://i.s-madewell.com/is/image/madewell/K1400_EG9870_ld?$MW_320x407$", min_temperature: 32, max_temperature: 55, is_rainy: true, user_id: 1)
 
-Outfit.create(name: "Chelsea Boots", description: "Black Leather Ankle Boots", category: "Shoes", image_url: "https://i.s-madewell.com/is/image/madewell/J8295_BK5229_ld?$MW_1007x1280$", min_temperature: 32, max_temperature: 70, is_rainy: true, user_id: 1)
+Outfit.create(name: "Chelsea Boots", description: "Black Ankle Boots", category: "Shoes", image_url: "https://i.s-madewell.com/is/image/madewell/J8295_BK5229_ld?$MW_1007x1280$", min_temperature: 32, max_temperature: 70, is_rainy: true, user_id: 1)
 
-Outfit.create(name: "Loafer Mule", description: "Pink Velvet Loafer Mule", category: "Shoes", image_url: "https://i.s-madewell.com/is/image/madewell/J8431_PK5439_ld?$MW_1007x1280$", min_temperature: 70, max_temperature: 90, is_rainy: false,  user_id: 1)
+Outfit.create(name: "Loafer Mule", description: "Pink Velvet Mule", category: "Shoes", image_url: "https://i.s-madewell.com/is/image/madewell/J8431_PK5439_ld?$MW_1007x1280$", min_temperature: 70, max_temperature: 90, is_rainy: false,  user_id: 1)
 
 Outfit.create(name: "Summer Sandals", description: "Nude Multistrap Sandal", category: "Shoes", image_url: "https://i.s-madewell.com/is/image/madewell/G2006_NA6633_ld?$MW_1007x1280$", min_temperature: 70, max_temperature: 110, is_rainy: false, user_id: 1)
 
